@@ -5,7 +5,7 @@ const port = process.env.PORT || 3000
 app.use(express.static("public"))
 
 app.get('/', (req, res) => {
-  res.send('Welcome to Mock prep api!')
+  res.send('Welcome to Mock prep!')
 });
 
 app.listen(port, () => {
