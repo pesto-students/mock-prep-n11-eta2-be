@@ -1,0 +1,28 @@
+{
+  "name": "mock-prep-n11-eta2-be",
+  "version": "1.0.0",
+  "description": "Backend application for mockprep",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pesto-students/mock-prep-n11-eta2-be.git"
+  },
+  "keywords": [
+    "mock",
+    "prep",
+    "pesto",
+    "eta-2"
+  ],
+  "author": "Mohammed Saif, Balaji Kamalesan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pesto-students/mock-prep-n11-eta2-be/issues"
+  },
+  "homepage": "https://github.com/pesto-students/mock-prep-n11-eta2-be#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
