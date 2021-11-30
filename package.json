@@ -4,6 +4,7 @@
   "description": "Backend application for mockprep",
   "main": "index.js",
   "scripts": {
+      
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,6 +24,7 @@
   },
   "homepage": "https://github.com/pesto-students/mock-prep-n11-eta2-be#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nodemon": "^2.0.15"
   }
 }
