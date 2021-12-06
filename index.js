@@ -1,12 +1,15 @@
 const express = require('express')
 const app = express();
-const port = process.env.PORT || 3000;
-const cookieSession = require('cookie-session');
+const bodyParser = require('body-parser')
 const passport = require('passport');
-require('./passport');
-const mongoose = require('mongoose')
-require('dotenv').config();
+const mongoose = require('mongoose');
+const adminRoute = require('./Routes/Admin/adminRoute')
 
+
+const cookieSession = require('cookie-session');
+require('./passport');
+require('dotenv').config();
+const port = process.env.PORT || 3000;
 
 const mongo_url = "mongodb+srv://pesto-mockprep:pesto-eta2@mockprep.hhlfz.mongodb.net/mockprep?retryWrites=true&w=majority"
 const connectionParams={
@@ -14,7 +17,9 @@ const connectionParams={
     useUnifiedTopology: true 
 }
 
-app.use(express.static("public"))
+app.use(express.static("public"));
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieSession({
     name: 'google-auth-session',
     keys: ['key1', 'key2']
@@ -29,9 +34,9 @@ const isLoggedIn = (req, res, next) => {
       }
   }
   
-  app.use(passport.initialize());
-  app.use(passport.session());
-  
+app.use(passport.initialize());
+app.use(passport.session());
+app.use('/admin', adminRoute)
 
 mongoose.connect(mongo_url, connectionParams)
 .then( () => {
@@ -49,12 +54,12 @@ app.get("/success",isLoggedIn, (req, res) => {
     res.send(`Welcome ${req.user.email}`)
 })
 
-app.get('/google',
-    passport.authenticate('google', {
-            scope:
-                ['email', 'profile']
-        }
-    ));
+app.get('/google', passport.authenticate('google', {
+    scope:
+        ['email', 'profile']
+}) ,(req,res) => {
+    res.json("Initiated Login")
+});
 
 app.get('/google/callback',
     passport.authenticate('google', {

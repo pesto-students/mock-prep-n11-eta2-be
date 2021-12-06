@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/pesto-students/mock-prep-n11-eta2-be#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "cookie-session": "^1.4.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
