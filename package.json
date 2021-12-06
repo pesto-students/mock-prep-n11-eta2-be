@@ -24,9 +24,16 @@
   },
   "homepage": "https://github.com/pesto-students/mock-prep-n11-eta2-be#readme",
   "dependencies": {
+    "cookie-session": "^1.4.0",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "express-session": "^1.17.2",
     "mongodb": "^4.2.0",
     "mongoose": "^6.0.14",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "passport": "^0.5.0",
+    "passport-google-oauth": "^2.0.0",
+    "passport-google-oauth2": "^0.2.0",
+    "passport-google-oauth20": "^2.0.0"
   }
 }
