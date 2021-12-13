@@ -23,4 +23,9 @@ router.get('/getData', function (req, res) {
   })
 })
 
+router.post('/adminLogin', function (req,res){
+  console.log(req.body)
+  res.json({status : "Success"})
+})
+
 module.exports = router
