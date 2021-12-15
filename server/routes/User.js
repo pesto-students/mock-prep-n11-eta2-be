@@ -8,5 +8,6 @@ router.get("/getUsers", userController.find)
 router.post("/addUser", userController.create)
 router.get("/getUser/:id", userController.findOne)
 router.post("/updateUser/:id", userController.update)
+router.delete("/deleteUser/:id", userController.delete)
 
 module.exports = router 
