@@ -2,7 +2,7 @@ const express = require('express')
 const app = express();
 const bodyParser = require('body-parser')
 
-// const adminRoute = require('./server/routes/admin')
+const adminRoute = require('./server/routes/admin')
 // const UserRoute = require('./server/routes/User')
 // const StudentRoute = require('./server/routes/Student')
 // const InterviewerRoute = require('./server/routes/interviewer')
