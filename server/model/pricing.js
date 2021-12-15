@@ -8,5 +8,6 @@ var PricingSchema = new mongoose.Schema(
         benefits: [ { type: String, required: true }]
 })
 
+
 const PricingDb = mongoose.model('Pricing', PricingSchema) 
 module.exports = PricingDb;

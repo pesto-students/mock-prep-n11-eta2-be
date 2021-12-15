@@ -46,5 +46,6 @@ var AdminDashboardSchema = new mongoose.Schema(
     }
 )
 
+
 const AdminDashboardDb = mongoose.model('AdminDashboard', AdminDashboardSchema) 
 module.exports = AdminDashboardDb;

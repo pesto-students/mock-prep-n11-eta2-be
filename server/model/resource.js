@@ -11,3 +11,4 @@ var ResourceSchema = new mongoose.Schema(
 
 const ResourceDb = mongoose.model('Resource', ResourceSchema) 
 module.exports = ResourceDb;
+
