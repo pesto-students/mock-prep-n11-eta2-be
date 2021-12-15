@@ -1,4 +1,4 @@
-const PricingDb = require("../model/Pricing")
+const PricingDb = require("../model/pricing")
 
 exports.find = (req, res) => { 
     PricingDb.find().then(user => { res.send(user)}).catch(err => {res.status(500).send({message:err.message || "Error fetching Pricing"})})

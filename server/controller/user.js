@@ -1,4 +1,4 @@
-const UserDb = require("../model/User")
+const UserDb = require("../model/user")
 
 exports.find = (req, res) => { 
         UserDb.find().then(user => { res.send(user)}).catch(err => {res.status(500).send({message:err.message || "Error fetching user"})})

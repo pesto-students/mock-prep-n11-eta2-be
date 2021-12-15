@@ -1,6 +1,6 @@
 const express = require('express')
 var router = express.Router()
-const appReviewController = require("../controller/AppReview")
+const appReviewController = require("../controller/appReview")
 
 router.get("/getReviews", appReviewController.find)
 router.post("/addReview", appReviewController.create)

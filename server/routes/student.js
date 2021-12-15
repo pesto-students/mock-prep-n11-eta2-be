@@ -1,6 +1,6 @@
 const express = require('express')
 var router = express.Router()
-const studentController = require("../controller/Student")
+const studentController = require("../controller/student")
 
 router.get("/getStudents", studentController.find)
 router.post("/addStudent", studentController.create)

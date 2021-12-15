@@ -1,4 +1,4 @@
-const StudentDb = require("../model/Student")
+const StudentDb = require("../model/student")
 
 exports.find = (req, res) => { 
     StudentDb.find().then(user => { res.send(user)}).catch(err => {res.status(500).send({message:err.message || "Error fetching Student"})})

@@ -1,4 +1,4 @@
-const DashboardDb = require("../model/Dashboard")
+const DashboardDb = require("../model/dashboard")
 
 exports.find = (req, res) => { 
     DashboardDb.find().then(user => { res.send(user)}).catch(err => {res.status(500).send({message:err.message || "Error fetching Dashboard"})})

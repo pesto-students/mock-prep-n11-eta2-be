@@ -1,6 +1,6 @@
 const express = require('express')
 var router = express.Router()
-const TopicController = require("../controller/Topic")
+const TopicController = require("../controller/topic")
 
 router.get("/getTopics", TopicController.find)
 router.post("/addTopic", TopicController.create)

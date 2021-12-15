@@ -1,6 +1,6 @@
 const express = require('express')
 var router = express.Router()
-const interviewerController = require("../controller/Interiewer")
+const interviewerController = require("../controller/interiewer")
 
 router.get("/getInterviewers", interviewerController.find)
 router.post("/addInterviewer", interviewerController.create)

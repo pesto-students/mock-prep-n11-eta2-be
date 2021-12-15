@@ -1,4 +1,4 @@
-const TopicDb = require("../model/Topic")
+const TopicDb = require("../model/topic")
 
 exports.find = (req, res) => { 
     TopicDb.find().then(user => { res.send(user)}).catch(err => {res.status(500).send({message:err.message || "Error fetching Topic"})})

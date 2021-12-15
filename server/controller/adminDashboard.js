@@ -1,4 +1,4 @@
-const AdminDashboardDb = require("../model/AdminDashboard")
+const AdminDashboardDb = require("../model/adminDashboard")
 
 exports.find = (req, res) => { 
     AdminDashboardDb.find().then(user => { res.send(user)}).catch(err => {res.status(500).send({message:err.message || "Error fetching AdminDashboard"})})

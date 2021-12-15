@@ -1,4 +1,4 @@
-const AppReviewDb = require("../model/AppReview")
+const AppReviewDb = require("../model/appReview")
 
 exports.find = (req, res) => { 
     AppReviewDb.find().then(user => { res.send(user)}).catch(err => {res.status(500).send({message:err.message || "Error fetching AppReview"})})
