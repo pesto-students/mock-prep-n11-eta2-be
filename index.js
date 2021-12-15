@@ -1,7 +1,6 @@
 const express = require('express')
 const app = express();
 const bodyParser = require('body-parser')
-const port = process.env.PORT || 3000;
 const adminRoute = require('./server/routes/Admin')
 const UserRoute = require('./server/routes/User')
 const StudentRoute = require('./server/routes/Student')
@@ -34,6 +33,8 @@ app.use("/adminDashboard", AdminDashbaordRoute)
 app.use("/pricing", PricingRoute)
 app.use("/topic", TopicRoute)
 app.use("/resource",ResourceRoute)
+
+const port = process.env.PORT || 3000
 
 app.listen(port, () => {
   console.log(`Mock Prep listening on port ${port}!`)
