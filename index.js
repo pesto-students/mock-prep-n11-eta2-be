@@ -14,7 +14,7 @@ const TopicRoute = require('./server/routes/topic')
 const ResourceRoute = require('./server/routes/resource')
 
 const cookieSession = require('cookie-session');
-const connectDb = require("./server/database/DbConnect")
+const connectDb = require("./server/database/dbConnect")
 
 app.use(express.static("public"));
 app.use(bodyParser.json())
@@ -24,16 +24,16 @@ app.use(cookieSession({
     keys: ['key1', 'key2']
 }))
 
-// app.use('/admin', adminRoute)
-// app.use('/user', UserRoute)
-// app.use('/student', StudentRoute)
-// app.use('/interviewer', InterviewerRoute)
-// app.use('/appReview', ApplicationReviewRoute)
-// app.use("/dashboard", DashbaordRoute)
-// app.use("/adminDashboard", AdminDashbaordRoute)
-// app.use("/pricing", PricingRoute)
-// app.use("/topic", TopicRoute)
-// app.use("/resource",ResourceRoute)
+app.use('/admin', adminRoute)
+app.use('/user', UserRoute)
+app.use('/student', StudentRoute)
+app.use('/interviewer', InterviewerRoute)
+app.use('/appReview', ApplicationReviewRoute)
+app.use("/dashboard", DashbaordRoute)
+app.use("/adminDashboard", AdminDashbaordRoute)
+app.use("/pricing", PricingRoute)
+app.use("/topic", TopicRoute)
+app.use("/resource",ResourceRoute)
 
 const PORT = process.env.PORT||'8080';
 
@@ -43,4 +43,4 @@ app.listen(PORT, () => {
 
 app.get("/", (req, res) => { res.send("Welcome to Mock Prep !!")})
 
-// connectDb();
+connectDb();
