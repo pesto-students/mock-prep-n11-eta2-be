@@ -1,4 +1,5 @@
 const express = require('express')
+const cors = require("cors")
 const app = express();
 const bodyParser = require('body-parser')
 
@@ -16,6 +17,7 @@ const ResourceRoute = require('./server/routes/resource')
 const cookieSession = require('cookie-session');
 const connectDb = require("./server/database/dbConnect")
 
+app.use(cors())
 app.use(express.static("public"));
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
