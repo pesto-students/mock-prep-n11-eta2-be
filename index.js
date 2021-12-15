@@ -39,4 +39,6 @@ app.listen(port, () => {
   console.log(`Mock Prep listening on port ${port}!`)
 });
 
+app.get("/", (req, res) => { res.send("Welcome to Mock Prep !!")})
+
 connectDb();
