@@ -34,10 +34,10 @@ app.use("/pricing", PricingRoute)
 app.use("/topic", TopicRoute)
 app.use("/resource",ResourceRoute)
 
-const port = process.env.PORT || 3000
+const PORT = process.env.PORT||'8080';
 
-app.listen(port, () => {
-  console.log(`Mock Prep listening on port ${port}!`)
+app.listen(PORT, () => {
+  console.log(`Mock Prep listening on port ${PORT}!`)
 });
 
 app.get("/", (req, res) => { res.send("Welcome to Mock Prep !!")})
