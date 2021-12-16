@@ -12,7 +12,8 @@ exports.create = (req, res) => {
         email: req.body.email,
         company:req.body.company,
         image: req.body.image,
-        review: req.body.review
+        review: req.body.review,
+        rating: req.body.rating
     })
     
 
