@@ -20,7 +20,7 @@ exports.create = (req, res) => {
         about: req.body.about,
         topics: req.body.topics,
         rating: req.body.rating,
-        onboarded: req.body.listed,
+        onboarded: req.body.onboarded,
         interviewCount:req.body.interviewCount
     })
     console.log(int)
