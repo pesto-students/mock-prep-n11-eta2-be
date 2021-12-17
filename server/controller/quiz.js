@@ -1,4 +1,4 @@
-const QuizDb = require("../model/Quiz")
+const QuizDb = require("../model/quiz")
 
 exports.find = (req, res) => { 
         QuizDb.find().then(Quiz => { res.send(Quiz)}).catch(err => {res.status(500).send({message:err.message || "Error fetching Quiz"})})
