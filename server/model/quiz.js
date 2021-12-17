@@ -1,8 +1,6 @@
 const mongoose = require("mongoose")
 
 var QuizSchema = new mongoose.Schema(
-    {
-        quizList: [
             {
                 title: { type: String, unique: true, required: true },
                 description: { type: String },
@@ -34,9 +32,6 @@ var QuizSchema = new mongoose.Schema(
                     }
                 ]
             }
-        ],
-      
-    }
 )
 
 const QuizDb = mongoose.model('Quiz', QuizSchema) 
