@@ -43,3 +43,4 @@ exports.delete = (req, res) => {
         .then(data => { data != null ? res.send(data) : res.status(401).send({message:"Quiz not found for id "+id})})
         .catch(err => { res.status(500).send({ message: err.message || "Error while Deleting Quiz" }) })
 }
+
