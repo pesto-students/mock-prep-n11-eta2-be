@@ -1,4 +1,4 @@
-const InterviewerDb = require("../model/Interviewer")
+const InterviewerDb = require("../model/interviewer")
 
 exports.find = (req, res) => { 
     InterviewerDb.find().then(user => { res.send(user)}).catch(err => {res.status(500).send({message:err.message || "Error fetching Interviewer"})})
@@ -20,7 +20,7 @@ exports.create = (req, res) => {
         about: req.body.about,
         topics: req.body.topics,
         rating: req.body.rating,
-        onboarded: req.body.listed,
+        onboarded: req.body.onboarded,
         interviewCount:req.body.interviewCount
     })
     console.log(int)

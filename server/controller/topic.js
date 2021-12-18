@@ -1,20 +1,19 @@
-const PricingDb = require("../model/Pricing")
+const TopicDb = require("../model/topic")
 
 exports.find = (req, res) => { 
-    PricingDb.find().then(user => { res.send(user)}).catch(err => {res.status(500).send({message:err.message || "Error fetching Pricing"})})
+    TopicDb.find().then(user => { res.send(user)}).catch(err => {res.status(500).send({message:err.message || "Error fetching Topic"})})
 }
 
 exports.create = (req, res) => { 
     if (!req.body) { res.status(400).send({message:"Input cannot be empty"})}
 
-    const Pricing = new PricingDb({
+    const Topic = new TopicDb({
         title: req.body.title,
-        price: req.body.price,
         description: req.body.description,
-        benefits: req.body.benefits, 
+        image: req.body.image, 
     })
 
-    Pricing.save(Pricing)
+    Topic.save(Topic)
         .then(data => { data != null ? res.send(data) : res.status(401).send({message:"Review not found for id "+id})})
         .catch(err => { res.status(500).send({ message: err.message || "Error while saving user" }) })
 }
@@ -23,25 +22,25 @@ exports.findOne = (req, res) => {
  
     if (!req.body) { res.status(500).send({message:"Input cannot be empty"})}
     let id = req.params.id;
-    PricingDb.findById(id)
+    TopicDb.findById(id)
     .then(data => { data != null ? res.send(data) : res.status(401).send({message:"Interviewer not found for id "+id})})
-        .catch(err => { res.status(500).send({ message: err.message || "Error while fetching Pricing" }) })
+        .catch(err => { res.status(500).send({ message: err.message || "Error while fetching Topic" }) })
 }
 
 exports.update = (req, res) => { 
     if (!req.body) { res.status(500).send({message:"Input cannot be empty"})}
 
     let id = req.params.id;
-    PricingDb.findByIdAndUpdate(id, req.body)
+    TopicDb.findByIdAndUpdate(id, req.body)
         .then(data => { data != null ? res.send(data) : res.status(401).send({message:"Interviewer not found for id "+id})})
-        .catch(err => { res.status(500).send({ message: err.message || "Error while updating Pricing" }) })
+        .catch(err => { res.status(500).send({ message: err.message || "Error while updating Topic" }) })
 }
 
 exports.delete = (req, res) => { 
     if (!req.body) { res.status(500).send({message:"Input cannot be empty"})}
 
     let id = req.params.id;
-    PricingDb.findByIdAndDelete(id)
-        .then(data => { data != null ? res.send(data) : res.status(401).send({message:"Pricing not found for id "+id})})
-        .catch(err => { res.status(500).send({ message: err.message || "Error while Deleting Pricing" }) })
+    TopicDb.findByIdAndDelete(id)
+        .then(data => { data != null ? res.send(data) : res.status(401).send({message:"Topic not found for id "+id})})
+        .catch(err => { res.status(500).send({ message: err.message || "Error while Deleting Topic" }) })
 }

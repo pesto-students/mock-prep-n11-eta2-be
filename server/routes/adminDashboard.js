@@ -1,6 +1,6 @@
 const express = require('express')
 var router = express.Router()
-const AdminDashboardController = require("../controller/AdminDashboard")
+const AdminDashboardController = require("../controller/adminDashboard")
 
 router.get("/getData", AdminDashboardController.find)
 router.post("/addData", AdminDashboardController.create)

@@ -1,6 +1,6 @@
 const express = require('express')
 var router = express.Router()
-const PricingController = require("../controller/Pricing")
+const PricingController = require("../controller/pricing")
 
 router.get("/getPricings", PricingController.find)
 router.post("/addPricing", PricingController.create)

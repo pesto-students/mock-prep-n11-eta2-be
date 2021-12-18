@@ -1,6 +1,6 @@
 const express = require('express')
 var router = express.Router()
-const ResourceController = require("../controller/Resource")
+const ResourceController = require("../controller/resource")
 
 router.get("/", (req, res) => { res.send("Resource Api")})
 

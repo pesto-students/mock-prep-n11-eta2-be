@@ -1,4 +1,4 @@
-const AppReviewDb = require("../model/AppReview")
+const AppReviewDb = require("../model/appReview")
 
 exports.find = (req, res) => { 
     AppReviewDb.find().then(user => { res.send(user)}).catch(err => {res.status(500).send({message:err.message || "Error fetching AppReview"})})
@@ -12,7 +12,8 @@ exports.create = (req, res) => {
         email: req.body.email,
         company:req.body.company,
         image: req.body.image,
-        review: req.body.review
+        review: req.body.review,
+        rating: req.body.rating
     })
     
 
@@ -46,4 +47,3 @@ exports.delete = (req, res) => {
         .then(data => { data != null ? res.send(data) : res.status(401).send({message:"Review not found for id "+id})})
         .catch(err => { res.status(500).send({ message: err.message || "Error while deleting Review" }) })
 }
-

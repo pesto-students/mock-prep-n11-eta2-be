@@ -1,4 +1,4 @@
-const ResourceDb = require("../model/Resource")
+const ResourceDb = require("../model/resource")
 
 exports.find = (req, res) => { 
         ResourceDb.find().then(Resource => { res.send(Resource)}).catch(err => {res.status(500).send({message:err.message || "Error fetching Resource"})})
