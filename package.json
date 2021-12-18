@@ -1,0 +1,42 @@
+{
+  "name": "mock-prep-n11-eta2-be",
+  "version": "1.0.0",
+  "description": "Backend application for mockprep",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pesto-students/mock-prep-n11-eta2-be.git"
+  },
+  "keywords": [
+    "mock",
+    "prep",
+    "pesto",
+    "eta-2"
+  ],
+  "author": "Mohammed Saif, Balaji Kamalesan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pesto-students/mock-prep-n11-eta2-be/issues"
+  },
+  "homepage": "https://github.com/pesto-students/mock-prep-n11-eta2-be#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.6",
+    "cookie-session": "^1.4.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "google-auth-library": "^7.11.0",
+    "mongodb": "^4.2.0",
+    "mongoose": "^6.0.14",
+    "nodemon": "^2.0.15",
+    "passport": "^0.5.0",
+    "passport-google-oauth": "^2.0.0",
+    "passport-google-oauth2": "^0.2.0",
+    "passport-google-oauth20": "^2.0.0"
+  }
+}
