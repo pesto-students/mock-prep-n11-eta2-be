@@ -12,7 +12,8 @@ exports.create = (req, res) => {
         description: req.body.description,
         category: req.body.category,
         image: req.body.image,
-        questions:req.body.questions
+        questions: req.body.questions,
+        
     })
 
     Quiz.save(Quiz).then(data => { res.send(data) }).catch(err => {res.status(500).send({message:err.message || "Error while saving Quiz"})})
