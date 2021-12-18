@@ -4,8 +4,8 @@ var QuizSchema = new mongoose.Schema(
             {
                 title: { type: String, unique: true, required: true },
                 description: { type: String },
-                category: { type: String, required: true },
-                image: { type: String, required: true },
+                category: { type: String },
+                image: { type: String,required:true },
                 questions: [
                     {
                         question: { type: String },
