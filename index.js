@@ -1,4 +1,5 @@
-const express = require('express')
+  const express = require('express')
+const cors = require("cors")
 const app = express();
 const bodyParser = require('body-parser')
 
@@ -12,10 +13,15 @@ const AdminDashbaordRoute = require('./server/routes/adminDashboard')
 const PricingRoute = require('./server/routes/pricing')
 const TopicRoute = require('./server/routes/topic')
 const ResourceRoute = require('./server/routes/resource')
+
+const QuizRoute = require('./server/routes/quiz')
+
+
 const AuthRoute = require('./server/routes/auth')
 const cookieSession = require('cookie-session');
 const connectDb = require("./server/database/dbConnect")
 
+app.use(cors())
 app.use(express.static("public"));
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -34,7 +40,9 @@ app.use("/adminDashboard", AdminDashbaordRoute)
 app.use("/pricing", PricingRoute)
 app.use("/topic", TopicRoute)
 app.use("/resource",ResourceRoute)
+app.use("/quiz",QuizRoute)
 app.use("/auth",AuthRoute)
+
 
 const PORT = process.env.PORT||'8080';
 
