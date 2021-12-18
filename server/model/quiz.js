@@ -10,9 +10,19 @@ var QuizSchema = new mongoose.Schema(
                     {
                         question: { type: String },
                         description: { type: String },
-                        options: [{type:String}],
+                        options: [
+                            { answer_a: { type: String } },
+                            { answer_b: { type: String} },
+                            { answer_c: { type: String} },
+                            { answer_d: { type: String } }
+                        ],
                         multipleChoice: { type: Boolean },
-                        correctAnswers: [{type:Boolean}],
+                        correctAnswers: [
+                            { answer_a: { type: Boolean}},
+                            { answer_b: { type: Boolean}},
+                            { answer_c: { type: Boolean}},
+                            { answer_d: { type: Boolean}}
+                        ],
                         correctAnswer: { type: String },
                         explanation: { type: String },
                         hint: { type: String },
