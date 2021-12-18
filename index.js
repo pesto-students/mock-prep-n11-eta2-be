@@ -14,6 +14,10 @@ const PricingRoute = require('./server/routes/pricing')
 const TopicRoute = require('./server/routes/topic')
 const ResourceRoute = require('./server/routes/resource')
 
+const QuizRoute = require('./server/routes/quiz')
+
+
+const AuthRoute = require('./server/routes/auth')
 const cookieSession = require('cookie-session');
 const connectDb = require("./server/database/dbConnect")
 
@@ -36,6 +40,9 @@ app.use("/adminDashboard", AdminDashbaordRoute)
 app.use("/pricing", PricingRoute)
 app.use("/topic", TopicRoute)
 app.use("/resource",ResourceRoute)
+app.use("/quiz",QuizRoute)
+app.use("/auth",AuthRoute)
+
 
 const PORT = process.env.PORT||'8080';
 
