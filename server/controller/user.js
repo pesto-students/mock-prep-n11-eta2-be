@@ -4,13 +4,14 @@ exports.find = (req, res) => {
         UserDb.find().then(user => { res.send(user)}).catch(err => {res.status(500).send({message:err.message || "Error fetching user"})})
 }
 
-exports.create = (req, res) => { 
+exports.    create = (req, res) => { 
     if (!req.body) { res.status(400).send({message:"Input cannot be empty"})}
 
     const user = new UserDb({
         name: req.body.name,
         email: req.body.email,
         role: req.body.role,
+        googleObj: req.body.googleObj
     })
 
     user.save(user).then(data => { res.send(data) }).catch(err => {res.status(500).send({message:err.message || "Error while saving user"})})
