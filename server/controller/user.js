@@ -11,6 +11,7 @@ exports.    create = (req, res) => {
         name: req.body.name,
         email: req.body.email,
         role: req.body.role,
+        googleObj: req.body.googleObj
     })
 
     user.save(user).then(data => { res.send(data) }).catch(err => {res.status(500).send({message:err.message || "Error while saving user"})})
