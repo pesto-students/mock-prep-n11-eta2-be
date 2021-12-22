@@ -43,3 +43,27 @@ exports.delete = (req, res) => {
         .then(data => { data != null ? res.send(data) : res.status(401).send({message:"User not found for id "+id})})
         .catch(err => { res.status(500).send({ message: err.message || "Error while Deleting user" }) })
 }
+
+exports.findOneUser = (req,res) => {
+    if (!req.body) { res.status(500).send({message:"Input cannot be empty"})}
+    console.log(req.body);
+    let email = req.body.email;
+    UserDb.find({"email" : email })
+             .then(data => {
+                 if(data){
+                     console.log(data)
+                     res.json(data)
+                 }
+                 else {
+                     res.json({
+                         status : "Faiure",
+                         message : "Cannot find the User"
+                     })
+                 }
+             })
+             .catch(err => {
+                 res.status(500).json({
+                     message : err.message || "Error while finding "+email
+                 })
+             })
+}
