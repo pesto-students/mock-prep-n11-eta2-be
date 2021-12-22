@@ -8,10 +8,11 @@ exports.create = (req, res) => {
     if (!req.body) { res.status(400).send({message:"Input cannot be empty"})}
 
     const Query = new QueryDb({
-        name: req.body.title,
+        name: req.body.name,
         email: req.body.email,
         contact: req.body.contact,
-        query: req.body.query,
+        description: req.body.description,
+        pending: req.body.pending,
         
     })
 

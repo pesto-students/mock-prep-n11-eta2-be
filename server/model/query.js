@@ -1,13 +1,14 @@
 const mongoose = require("mongoose")
 
-var PricingSchema = new mongoose.Schema(
+var QuerySchema = new mongoose.Schema(
     {
         name:{ type: String},
         email: { type: String},
         contact: { type: String},
-        query: {type:String }
+        description: { type: String },
+        pending: {type:Boolean}
 })
 
 
-const PricingDb = mongoose.model('Pricing', PricingSchema) 
-module.exports = PricingDb;
+const QueryDb = mongoose.model('Query', QuerySchema) 
+module.exports = QueryDb;
