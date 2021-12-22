@@ -42,6 +42,7 @@ app.use("/topic", TopicRoute)
 app.use("/resource",ResourceRoute)
 app.use("/quiz",QuizRoute)
 app.use("/auth",AuthRoute)
+app.use("/query",AuthRoute)
 
 
 const PORT = process.env.PORT||'8080';
