@@ -2,7 +2,6 @@ const express = require('express')
 const cors = require("cors")
 const app = express();
 const bodyParser = require('body-parser')
-
 const adminRoute = require('./server/routes/admin')
 const UserRoute = require('./server/routes/user')
 const StudentRoute = require('./server/routes/student')
@@ -15,11 +14,8 @@ const TopicRoute = require('./server/routes/topic')
 const ResourceRoute = require('./server/routes/resource')
 const RazorpayRoute = require('./server/routes/razorpay')
 const InterviewsRoute = require('./server/routes/interviews')
-
 const QuizRoute = require('./server/routes/quiz')
 const QueryRoute = require('./server/routes/query')
-
-
 const AuthRoute = require('./server/routes/auth')
 const cookieSession = require('cookie-session');
 const connectDb = require("./server/database/dbConnect")

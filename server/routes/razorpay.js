@@ -6,5 +6,4 @@ router.get("/", (req, res) => { res.send("razorpay Api")})
 
 router.post("/createOrder", RazorpayController.order)
 
-
 module.exports = router 
