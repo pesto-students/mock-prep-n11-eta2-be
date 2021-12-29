@@ -16,6 +16,10 @@ const StudentSchema = new mongoose.Schema(
         topics: [{ type: String }],
         rating: { type: Number },
         listed: { type: Boolean },
+        package: {
+            name: { type: String },
+            interviewsLeft: { type: Number },
+        }
     }
 ) 
 

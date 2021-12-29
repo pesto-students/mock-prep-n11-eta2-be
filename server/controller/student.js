@@ -21,6 +21,7 @@ exports.create = (req, res) => {
         topics: req.body.topics,
         rating: req.body.rating,
         listed: req.body.listed,
+        package: req.body.package
     })
 
     student.save(student)

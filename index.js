@@ -1,4 +1,4 @@
-  const express = require('express')
+const express = require('express')
 const cors = require("cors")
 const app = express();
 const bodyParser = require('body-parser')
@@ -13,6 +13,8 @@ const AdminDashbaordRoute = require('./server/routes/adminDashboard')
 const PricingRoute = require('./server/routes/pricing')
 const TopicRoute = require('./server/routes/topic')
 const ResourceRoute = require('./server/routes/resource')
+const RazorpayRoute = require('./server/routes/razorpay')
+const InterviewsRoute = require('./server/routes/interviews')
 
 const QuizRoute = require('./server/routes/quiz')
 const QueryRoute = require('./server/routes/query')
@@ -43,7 +45,9 @@ app.use("/topic", TopicRoute)
 app.use("/resource",ResourceRoute)
 app.use("/quiz",QuizRoute)
 app.use("/auth",AuthRoute)
-app.use("/query",QueryRoute)
+app.use("/query", QueryRoute)
+app.use("/razorpay", RazorpayRoute)
+app.use("/interviews",InterviewsRoute)
 
 
 const PORT = process.env.PORT||'8080';

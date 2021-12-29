@@ -6,9 +6,10 @@ var ResourceSchema = new mongoose.Schema(
         description:{ type: String, required: true },
         url: { type: String, required: true },
         image: { type: String },
-        topicId: {type:String, required:true}
+        topicId: {type:String}
 })
 
 const ResourceDb = mongoose.model('Resource', ResourceSchema) 
 module.exports = ResourceDb;
 
+    

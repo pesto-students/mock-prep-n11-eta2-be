@@ -1,24 +1,33 @@
 const QueryDb = require("../model/query")
 
 exports.find = (req, res) => { 
-        QueryDb.find().then(Query => { res.send(Query)}).catch(err => {res.status(500).send({message:err.message || "Error fetching Query"})})
+    QueryDb.find().then(Query => {
+        res.send(Query)
+    }).catch(err => {
+        res.status(404).send({ message: err.message || "Error fetching Query" })
+    })
 }
 
 exports.create = (req, res) => { 
-    if (!req.body) { res.status(400).send({message:"Input cannot be empty"})}
+    if (!req.body) {
+        res.status(400).send({ message: "Invalid Input, required fields missing." })
+    }
 
     const Query = new QueryDb({
+        title: req.body.title,
         name: req.body.name,
         email: req.body.email,
-        contact: req.body.contact,
         description: req.body.description,
-        pending: req.body.pending,
-        
+        status: req.body.status,
+        comments: req.body.comments
     })
 
-    Query.save(Query).then(data => { res.send(data) }).catch(err => {res.status(500).send({message:err.message || "Error while saving Query"})})
+    Query.save(Query).then(data => {
+        res.send(data)
+    }).catch(err => {
+        res.status(500 ).send({ message: err.message || "Server Error, could not store data" })
+    })
 }
-
 
 exports.findOne = (req, res) => { 
  
