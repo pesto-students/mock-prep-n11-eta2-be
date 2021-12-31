@@ -97,18 +97,22 @@ Mockprep is a interview preparation platform,allowing users to engage with exper
 
 `npm install`
 
-### 4. Test Api using Postman
 
-`Clone Postman` 
+### 4. Start the server
+
+`npm run`
+
+### 5. Read API Documentation
+
+<a  href="https://documenter.getpostman.com/view/9145771/UVRHi3EN">Postman Documentation URL</a>
+
+### 6. Test Api using Postman
 
 `1. Clone the collection using below button`
 `2. Set Environment variable - [baseUrl : https://mockprep.herokuapp.com]`
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/a64a6ebf1845fcb60878?action=collection%2Fimport) 
 
 
-### 5. Start the server
-
-`npm run`
 
 ## Contributors
 
