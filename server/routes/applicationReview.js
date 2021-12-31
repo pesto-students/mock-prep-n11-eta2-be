@@ -1,11 +1,11 @@
 const express = require('express')
 var router = express.Router()
-const appReviewController = require("../controller/appReview")
+const AppReviewController = require("../controller/appReview")
 
-router.get("/getReviews", appReviewController.find)
-router.post("/addReview", appReviewController.create)
-router.get("/getReview/:id", appReviewController.findOne)
-router.post("/updateReview/:id", appReviewController.update)
-router.delete("/deleteReview/:id", appReviewController.delete)
+router.get("/getData", AppReviewController.find)
+router.post("/addData", AppReviewController.create)
+router.get("/getData/:id", AppReviewController.findOne)
+router.post("/updateData/:id", AppReviewController.update)
+router.delete("/deleteData/:id", AppReviewController.delete)
 
 module.exports = router 

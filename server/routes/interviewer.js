@@ -1,11 +1,11 @@
 const express = require('express')
 var router = express.Router()
-const interviewerController = require("../controller/interviewer")
+const InterviewerController = require("../controller/interviewer")
 
-router.get("/getInterviewers", interviewerController.find)
-router.post("/addInterviewer", interviewerController.create)
-router.get("/getInterviewer/:id", interviewerController.findOne)
-router.post("/updateInterviewer/:id", interviewerController.update)
-router.delete("/deleteInterviewer/:id", interviewerController.delete)
+router.get("/getData", InterviewerController.find)
+router.post("/addData", InterviewerController.create)
+router.get("/getData/:id", InterviewerController.findOne)
+router.post("/updateData/:id", InterviewerController.update)
+router.delete("/deleteData/:id", InterviewerController.delete)
 
 module.exports = router 

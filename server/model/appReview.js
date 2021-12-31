@@ -11,6 +11,5 @@ var appReviewSchema = new mongoose.Schema(
     }
 )
 
-
 const AppReviewDb = mongoose.model('AppReview', appReviewSchema) 
 module.exports = AppReviewDb;

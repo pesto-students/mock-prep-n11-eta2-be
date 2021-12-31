@@ -1,33 +1,38 @@
-const DashboardDb = require("../model/dashboard");
+const StudentQueryDb = require("../model/studentquery");
 
 exports.find = (req, res) => {
-  DashboardDb.find()
-    .then((user) => {
-      res.send(user);
+  StudentQueryDb.find()
+    .then((StudentQuery) => {
+      res.send(StudentQuery);
     })
     .catch((err) => {
-      res.send({ message: err.message || "Error fetching Dashboard" });
+      res.send({ message: err.message || "Error fetching StudentQuery" });
     });
 };
 
 exports.create = (req, res) => {
   if (!req.body) {
-    res.status(400).send({ message: "Input cannot be empty" });
+    res.send({ message: "Invalid Input, required fields missing." });
   }
 
-  const int = new DashboardDb({
-    cards: req.body.cards,
-    usersOnboarded: req.body.usersOnboarded,
-    trendingTopics: req.body.trendingTopics,
+  const StudentQuery = new StudentQueryDb({
+    studentId: req.body.studentId,
+    title: req.body.title,
+    name: req.body.name,
+    email: req.body.email,
+    description: req.body.description,
+    status: req.body.status,
+    comments: req.body.comments,
   });
 
-  int
-    .save(int)
+  StudentQuery.save(StudentQuery)
     .then((data) => {
       res.send(data);
     })
     .catch((err) => {
-      res.send({ message: err.message || "Error while saving data" });
+      res.send({
+        message: err.message || "Server Error, could not store data",
+      });
     });
 };
 
@@ -36,14 +41,14 @@ exports.findOne = (req, res) => {
     res.send({ message: "Input cannot be empty" });
   }
   let id = req.params.id;
-  DashboardDb.findById(id)
+  StudentQueryDb.findById(id)
     .then((data) => {
       data != null
         ? res.send(data)
-        : res.status(401).send({ message: "Data not found for id " + id });
+        : res.send({ message: "StudentQuery not found for id " + id });
     })
     .catch((err) => {
-      res.send({ message: err.message || "Error while fetching data" });
+      res.send({ message: err.message || "Error while fetching StudentQuery" });
     });
 };
 
@@ -53,7 +58,7 @@ exports.update = (req, res) => {
   }
 
   let id = req.params.id;
-  DashboardDb.findByIdAndUpdate(id, req.body)
+  StudentQueryDb.findByIdAndUpdate(id, req.body)
     .then((data) => {
       data != null
         ? res.send(data)
@@ -70,7 +75,7 @@ exports.delete = (req, res) => {
   }
 
   let id = req.params.id;
-  DashboardDb.findByIdAndDelete(id)
+  StudentQueryDb.findByIdAndDelete(id)
     .then((data) => {
       data != null
         ? res.send(data)

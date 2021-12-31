@@ -1,8 +1,6 @@
-const { Timestamp } = require("mongodb");
 const mongoose = require("mongoose")
 
-var AdminDashboardSchema = new mongoose.Schema(
-    {
+var AdminDashboardSchema = new mongoose.Schema({
         cards: [{ description: { type: String }, value: { type: Number }, icon: { type: String } }],
         earnings: {
             title: { type: String },
@@ -45,7 +43,6 @@ var AdminDashboardSchema = new mongoose.Schema(
         }
     }
 )
-
 
 const AdminDashboardDb = mongoose.model('AdminDashboard', AdminDashboardSchema) 
 module.exports = AdminDashboardDb;
