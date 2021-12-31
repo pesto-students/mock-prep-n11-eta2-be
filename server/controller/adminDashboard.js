@@ -6,7 +6,7 @@ exports.find = (req, res) => {
 
 exports.create = (req, res) => { 
     if (!req.body) { res.status(400).send({message:"Input cannot be empty"})}
-
+    
     const int = new AdminDashboardDb({
         cards: req.body.cards,
         earnings: req.body.earnings,
@@ -14,7 +14,6 @@ exports.create = (req, res) => {
         totalSales: req.body.totalSales,
         tableDataSource:req.body.tableDataSource
     })
-    console.log(int)
 
     int.save(int).then(data => { res.send(data) }).catch(err => {res.status(500).send({message:err.message || "Error while saving user"})})
 }
