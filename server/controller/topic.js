@@ -1,11 +1,13 @@
 const TopicDb = require("../model/topic")
 
 exports.find = (req, res) => { 
-    TopicDb.find().then(user => { res.send(user)}).catch(err => {res.status(500).send({message:err.message || "Error fetching Topic"})})
+    TopicDb.find()
+        .then(user => { res.send(user) })
+        .catch(err => { res.send({ message: err.message || "Error fetching data" }) })
 }
 
 exports.create = (req, res) => { 
-    if (!req.body) { res.status(400).send({message:"Input cannot be empty"})}
+    if (!req.body) { res.send({message:"Input cannot be empty"})}
 
     const Topic = new TopicDb({
         title: req.body.title,
@@ -14,33 +16,33 @@ exports.create = (req, res) => {
     })
 
     Topic.save(Topic)
-        .then(data => { data != null ? res.send(data) : res.status(401).send({message:"Review not found for id "+id})})
-        .catch(err => { res.status(500).send({ message: err.message || "Error while saving user" }) })
+        .then(data => { data != null ? res.send(data) : res.send({message:"Data not found for id "+id})})
+        .catch(err => { res.send({ message: err.message || "Error while saving data" }) })
 }
 
 exports.findOne = (req, res) => { 
  
-    if (!req.body) { res.status(500).send({message:"Input cannot be empty"})}
+    if (!req.body) { res.send({message:"Input cannot be empty"})}
     let id = req.params.id;
     TopicDb.findById(id)
-    .then(data => { data != null ? res.send(data) : res.status(401).send({message:"Interviewer not found for id "+id})})
-        .catch(err => { res.status(500).send({ message: err.message || "Error while fetching Topic" }) })
+    .then(data => { data != null ? res.send(data) : res.send({message:"Data not found for id "+id})})
+        .catch(err => { res.send({ message: err.message || "Error while fetching data" }) })
 }
 
 exports.update = (req, res) => { 
-    if (!req.body) { res.status(500).send({message:"Input cannot be empty"})}
+    if (!req.body) { res.send({message:"Input cannot be empty"})}
 
     let id = req.params.id;
     TopicDb.findByIdAndUpdate(id, req.body)
-        .then(data => { data != null ? res.send(data) : res.status(401).send({message:"Interviewer not found for id "+id})})
-        .catch(err => { res.status(500).send({ message: err.message || "Error while updating Topic" }) })
+        .then(data => { data != null ? res.send(data) : res.send({message:"Data not found for id "+id})})
+        .catch(err => { res.send({ message: err.message || "Error while updating data" }) })
 }
 
 exports.delete = (req, res) => { 
-    if (!req.body) { res.status(500).send({message:"Input cannot be empty"})}
+    if (!req.body) { res.send({message:"Input cannot be empty"})}
 
     let id = req.params.id;
     TopicDb.findByIdAndDelete(id)
-        .then(data => { data != null ? res.send(data) : res.status(401).send({message:"Topic not found for id "+id})})
-        .catch(err => { res.status(500).send({ message: err.message || "Error while Deleting Topic" }) })
+        .then(data => { data != null ? res.send(data) : res.send({message:"Data not found for id "+id})})
+        .catch(err => { res.send({ message: err.message || "Error while Deleting data" }) })
 }

@@ -1,8 +1,10 @@
 const express = require('express')
 const cors = require("cors")
+const cookieSession = require('cookie-session');
+const connectDb = require("./server/database/dbConnect")
 const app = express();
 const bodyParser = require('body-parser')
-const adminRoute = require('./server/routes/admin')
+
 const UserRoute = require('./server/routes/user')
 const StudentRoute = require('./server/routes/student')
 const InterviewerRoute = require('./server/routes/interviewer')
@@ -19,9 +21,6 @@ const QueryRoute = require('./server/routes/query')
 const AuthRoute = require('./server/routes/auth')
 const StudentQueryRoute = require('./server/routes/studentquery')
 
-const cookieSession = require('cookie-session');
-const connectDb = require("./server/database/dbConnect")
-
 app.use(cors())
 app.use(express.static("public"));
 app.use(bodyParser.json())
@@ -31,7 +30,6 @@ app.use(cookieSession({
     keys: ['key1', 'key2']
 }))
 
-app.use('/admin', adminRoute)
 app.use('/user', UserRoute)
 app.use('/student', StudentRoute)
 app.use('/interviewer', InterviewerRoute)
@@ -47,8 +45,6 @@ app.use("/query", QueryRoute)
 app.use("/razorpay", RazorpayRoute)
 app.use("/interviews", InterviewsRoute)
 app.use("/studentQuery", StudentQueryRoute)
-
-
 
 const PORT = process.env.PORT||'8080';
 

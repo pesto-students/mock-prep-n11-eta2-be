@@ -2,11 +2,11 @@ const mongoose = require("mongoose")
 
 var InterviewsSchema = new mongoose.Schema(
     {
-        topic: { type: String, required: true },
-        date: { type: String, required: true },
-        time: { type: String, required: true },
-        meetingUrl: { type: String, required: true },
-        status: { type: String, required: true },
+        topic: { type: String },
+        date: { type: String },
+        time: { type: String},
+        meetingUrl: { type: String},
+        status: { type: String},
         student: {
             name: { type: String  },
             email: { type: String  },
@@ -23,12 +23,12 @@ var InterviewsSchema = new mongoose.Schema(
             actionItems: {type:String},
             implementation: {type:Number},
             logical: {type:Number},
-            overallRating: { type: Number, required: true },
+            overallRating: { type: Number},
             finalCal: { type: Boolean},
             comments: { type: String},
         },
         studentFeedback: {
-            interviewerExperience: { type: Number, required: true },
+            interviewerExperience: { type: Number },
             interviewerKnowledge: { type: String },
             queriesResolved: {type:Number},
             comments: {type:String}
@@ -40,11 +40,10 @@ var InterviewsSchema = new mongoose.Schema(
             status: { type: String } }    
         ],
 
-        key: { type: Number, required: true },
-        
+        key: { type: Number},
     }
 )
 
-const InterviewDb = mongoose.model('interview', InterviewsSchema) 
+const InterviewDb = mongoose.model('Interviews', InterviewsSchema) 
 module.exports = InterviewDb;
 
