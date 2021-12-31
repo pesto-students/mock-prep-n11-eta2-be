@@ -8,14 +8,6 @@ require('dotenv').config();
 router.use(passport.initialize());
 router.use(passport.session());
 
-const isLoggedIn = (req, res, next) => {
-    if (req.user) {
-        next();
-    } else {
-        res.sendStatus(401);
-    }
-}
-
 router.get("/failed", (req, res) => {
     res.send("Failed")
 })
@@ -32,12 +24,13 @@ router.get('/google', passport.authenticate('google', {
 });
 
 router.get('/google/callback',
+    
     passport.authenticate('google', {
         failureRedirect: '/failed',
     }),
+
     function (req, res) {
         res.redirect('/success')
-
     }
 );
 
@@ -46,3 +39,11 @@ router.get("/logout", (req, res) => {
     req.logout();
     res.redirect('/');
 })
+
+const isLoggedIn = (req, res, next) => {
+    if (req.user) {
+        next();
+    } else {
+        res.sendStatus(401);
+    }
+}

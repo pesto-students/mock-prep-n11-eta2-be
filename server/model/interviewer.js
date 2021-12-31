@@ -2,7 +2,6 @@ const mongoose = require("mongoose")
 
 const InterviewerSchema = new mongoose.Schema(
     {
-
         userId: { type: Object, required: true, unique: true },
         email: { type: String, required: true, unique: true },
         name: { type: String, required: true },
@@ -28,7 +27,6 @@ const InterviewerSchema = new mongoose.Schema(
         feedback: [{type:Object}]
     }
 ) 
-
 
 const InterviewerDb = mongoose.model('Interviewer', InterviewerSchema) 
 module.exports = InterviewerDb;

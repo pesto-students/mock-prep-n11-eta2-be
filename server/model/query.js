@@ -1,7 +1,6 @@
 const mongoose = require("mongoose")
 
-var QuerySchema = new mongoose.Schema(
-    {
+var UserQuerySchema = new mongoose.Schema({
         name:{ type: String},
         email: { type: String, required: true },
         contact: { type: String},
@@ -11,6 +10,5 @@ var QuerySchema = new mongoose.Schema(
         title: {type:String}
 })
 
-
-const QueryDb = mongoose.model('Query', QuerySchema) 
+const QueryDb = mongoose.model('UserQuery', UserQuerySchema) 
 module.exports = QueryDb;
