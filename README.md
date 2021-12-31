@@ -97,13 +97,16 @@ Mockprep is a interview preparation platform,allowing users to engage with exper
 
 `npm install`
 
+### 4. Test Api using Postman
+
+`Clone Postman` [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/a64a6ebf1845fcb60878?action=collection%2Fimport) 
+
 
 ### 6. Start the server
 
 `npm run`
 
 ## Contributors
-
 
 Mohammed Saif - [GiHub](https://github.com/saifmohammed888) - [Email](mailto:saifmohammed888@gmail.com ) - [LinkedIn](https://www.linkedin.com/in/saifmohammed888/)
 
