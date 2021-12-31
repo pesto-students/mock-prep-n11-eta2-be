@@ -24,6 +24,7 @@ exports.create = (req, res) => {
         meetingUrl: req.body.meetingUrl,
         studentFeedback: req.body.studentFeedback,
         interviewerFeedback: req.body.interviewerFeedback,
+        actionItems: req.body.actionItems
     })
 
     interview.save(interview).then(data => {

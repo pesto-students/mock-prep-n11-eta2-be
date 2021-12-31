@@ -3,7 +3,6 @@ const mongoose = require("mongoose")
 var InterviewsSchema = new mongoose.Schema(
     {
         topic: { type: String, required: true },
-       
         date: { type: String, required: true },
         time: { type: String, required: true },
         meetingUrl: { type: String, required: true },
@@ -34,6 +33,12 @@ var InterviewsSchema = new mongoose.Schema(
             queriesResolved: {type:Number},
             comments: {type:String}
         },
+        actionItems: [{
+            title: { type: String } ,
+            description: { type: String } ,
+            due: { type: String } ,
+            status: { type: String } }    
+        ],
 
         key: { type: Number, required: true },
         

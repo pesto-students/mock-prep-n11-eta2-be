@@ -19,7 +19,28 @@ const StudentSchema = new mongoose.Schema(
         package: {
             name: { type: String },
             interviewsLeft: { type: Number },
-        }
+        },
+        analytics: {
+            totalInterviews: { type: String },
+            topicsOnging: { type: Number },
+            interviewRating: { type: Number },
+            quizRating: { type: Number },
+            ranking: { type: Number }
+        },
+        learnings: [
+            {
+                topics: { 
+                    name: { type: String },
+                    topicId: {type:String}
+                },
+                quiz: {
+                    quizId: { type: String },
+                    score: { type: Number },
+                    attempts: {type:Number}
+                },
+                interview: { id: { type: String }, score: {type:Number}}
+            }
+        ]
     }
 ) 
 

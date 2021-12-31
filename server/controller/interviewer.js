@@ -21,7 +21,10 @@ exports.create = (req, res) => {
         topics: req.body.topics,
         rating: req.body.rating,
         onboarded: req.body.onboarded,
-        interviewCount:req.body.interviewCount
+        interviewCount: req.body.interviewCount,
+        analytics: req.body.analytics,
+        feedback: req.body.feedback,
+       
     })
     console.log(int)
 

@@ -17,6 +17,8 @@ const InterviewsRoute = require('./server/routes/interviews')
 const QuizRoute = require('./server/routes/quiz')
 const QueryRoute = require('./server/routes/query')
 const AuthRoute = require('./server/routes/auth')
+const StudentQueryRoute = require('./server/routes/studentquery')
+
 const cookieSession = require('cookie-session');
 const connectDb = require("./server/database/dbConnect")
 
@@ -43,7 +45,9 @@ app.use("/quiz",QuizRoute)
 app.use("/auth",AuthRoute)
 app.use("/query", QueryRoute)
 app.use("/razorpay", RazorpayRoute)
-app.use("/interviews",InterviewsRoute)
+app.use("/interviews", InterviewsRoute)
+app.use("/studentQuery", StudentQueryRoute)
+
 
 
 const PORT = process.env.PORT||'8080';
