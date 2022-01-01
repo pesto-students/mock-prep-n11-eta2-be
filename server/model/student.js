@@ -19,7 +19,7 @@ const StudentSchema = new mongoose.Schema({
             interviewsLeft: { type: Number },
         },
         analytics: {
-            totalInterviews: { type: String },
+            totalInterviews: { type: Number },
             topicsOnging: { type: Number },
             interviewRating: { type: Number },
             quizRating: { type: Number },
