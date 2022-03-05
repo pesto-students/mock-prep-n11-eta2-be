@@ -126,15 +126,11 @@ npm test
 
 ```
 
-
-
 # Technology Stack
 
 -   [Node Js](https://nodejs.org/en/)
 -   [Express Js](https://expressjs.com/)
 -   [Monogo DB](https://www.mongodb.com/)
-
-
 
 ## [](https://github.com/pesto-students/mock-prep-n11-eta2-fe#api-integrations)API Documentation
 
@@ -142,12 +138,11 @@ npm test
 [Postman Documentation URL](https://documenter.getpostman.com/view/9145771/UVRHi3EN)
 
 
-  
-
 # Authors
 
   
-[Balaji Kamalesan](https://github.com/balaji-kamalesan-au3)
+[Balaji Kamalesan](https://github.com/balaji-kamalesan-au3) 
+<br />
 [Mohammed Saif ](https://github.com/saifmohammed888) 
 
 
