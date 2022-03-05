@@ -1,124 +1,162 @@
 
 <!-- PROJECT LOGO -->
 
-<p align="center">
-	<img  src="https://res.cloudinary.com/mock-prep/image/upload/v1638635421/Mockprep/mp_Logo_n7fhp6.png"  alt="Logo" width="500">
-</p>
-<h1 align="center">Mock Prep Backend</h1>
+<br  />
 
-<p align="center">Mockprep is a interview preparation platform,allowing users to engage with experts to guide and mentor to prepare best way possible.</p>
+<p  align="center">
 
-<h3 align="center">
-	<a  href="https://mockprep.netlify.app">Live URL</a>
-</h3>
+<img  src="https://res.cloudinary.com/mock-prep/image/upload/v1638635421/Mockprep/Uilities/mp_Logo_n7fhp6.png"  alt="Logo"  width="600"  height="200"  >
 
-<details open="open">
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#artefacts">Artefacts</a></li>
-        <li><a href="#schema-design">Schema Design</a></li>
-        <li><a href="#built-with">Built With</a></li>
-        <li><a href="#performance">Performance</a></li>
-        <li><a href="#security">Security</a></li>
-      </ul>
-    </li>
-    <li><a href="#getting-started">Getting Started</a></li>
-    <li><a href="#contributors">Contributors</a></li>
-  </ol>
-</details>
-
-<!-- ABOUT THE PROJECT -->
-
-## About The Project
-
-[<img src="https://res.cloudinary.com/mock-prep/image/upload/v1640396151/Mockprep/topics/banner_plgqpf.gif">](https://res.cloudinary.com/emarat/image/upload/v1631802213/homepage-screenshot_n2dxwk.png)
-
-Mockprep is a interview preparation platform,allowing users to engage with experts to guide and mentor to prepare best way possible.We provide a platform which enables users to engage with experts in their industry who can assist them in their interview preparation by conducting mock interviews
-
-## Artefacts
-
-<p>
-	<a href="https://docs.google.com/document/d/13PP2jubRrUGr-iyKDsSAFyQuZj7SeGrclQT1MzZyCk0/edit?usp=sharing">PRD</a>
-	&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="https://drive.google.com/file/d/1EpXinZXhMikg9_xVgVGVUOQlWYgUnwdb/view?usp=sharing">One Pager</a>
-	&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="https://www.figma.com/file/RNbodcyvgvbJf4LZCu7qmZ/Mock-Prep-Wireframes?node-id=0%3A1">Wireframes</a>
-	&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 
-## Frontend Repo
+Mockprep is a interview preparation platform,allowing users to engage with experts to guide and mentor to prepare best way possible.
 
-[Frontend Repo](https://github.com/pesto-students/mock-prep-n11-eta2-fe)
+**Mission:**
 
+We provide a platform which enables users to engage with experts in their industry who can assist them in their interview preparation by conducting mock interviews
 
-## Built With
+**Vision:**
 
-<p align="center">
-	<a href="http://nodejs.org/">
-		<img src="https://res.cloudinary.com/emarat/image/upload/h_150/v1631803785/node-logo_jjvktb.png" title="Node JS" height="100">
-	</a>
-	<a href="https://expressjs.com/">
-		<img src="https://res.cloudinary.com/emarat/image/upload/h_150/v1631803785/express-logo_rtu2k4.png" title="Express JS" height="100">
-	</a>
-	<a href="https://www.mongodb.com/">
-		<img src="https://res.cloudinary.com/emarat/image/upload/h_150/v1631803785/mongoDB-logo_sv71ad.png" title="MongoDB" height="100">
-	</a>
-	&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="https://redis.io/">
-		<img src="https://res.cloudinary.com/emarat/image/upload/h_150/v1631803785/redis-logo_ovuew1.png" title="Redis" height="100">
-	</a>
-	<a href="https://razorpay.com/">
-		<img src="https://res.cloudinary.com/emarat/image/upload/h_150/v1631811211/Razorpay-logo_bzojzt.png" title="Razorpay Payment Gateway" height="100">
-	</a>
-	<a href="https://www.heroku.com/">
-		<img src="https://res.cloudinary.com/emarat/image/upload/h_150/v1631803784/heroku-logo_dvjrgt.png" title="Heroku" height="100">
-	</a>
-</p>
+To make the process of preparing for an interview simple and effective for everyone
 
-## Getting Started
+**Goals:**
 
-#### Prerequisites
+-   Provide valuable resources.
+-   Provide quality tests.
+-   Provide goof mock interviews.
 
--   Node JS
--   NPM
+**Features:**
 
-#### 1. Clone the project from github
+-   Best in industry experts availability .
+-   Simple and consistent UI.
+-   Secure SSO Authentication.
+-   Learn with our resources.
 
-`git clone https://github.com/pesto-students/mock-prep-n11-eta2-be.git`
-
-### 2. Navigate to folder
-
-`cd mock-prep-n11-eta2-be`
-
-### 3. Install the dependencies
-
-`npm install`
+<!-- TABLE OF CONTENTS -->
 
 
-### 4. Start the server
-
-`npm run`
-
-### 5. Read API Documentation
-
-<a  href="https://documenter.getpostman.com/view/9145771/UVRHi3EN">Postman Documentation URL</a>
-
-### 6. Test Api using Postman
-
-`1. Clone the collection using below button`
-`2. Set Environment variable - [baseUrl : https://mockprep.herokuapp.com]`
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/a64a6ebf1845fcb60878?action=collection%2Fimport) 
-
-
-
-## Contributors
-
-Mohammed Saif - [GiHub](https://github.com/saifmohammed888) - [Email](mailto:saifmohammed888@gmail.com ) - [LinkedIn](https://www.linkedin.com/in/saifmohammed888/)
+# Table of Contents
 
   
 
-Balaji Kamalesan - [GiHub](https://github.com/balaji-kamalesan-au3) - [Email](mailto:balajikamalesan96@gmail.com) -  [LinkedIn](https://in.linkedin.com/in/balaji-kamalesan)
+1. [Demo](#demo)
 
+2. [Installation](#installation)
+
+3. [Technology Stack](#technology-stack)
+
+4. [Authors](#authors)
+
+5. [License](#license)
+
+  
+
+<br/>
+
+  
+
+# Demo
+
+  
+
+[Live Demo](https://mockprep.netlify.app/)
+
+  
+
+<br/>
+
+  
+
+Please Note:
+
+  
+
+1. We recommend using this app in Google Chrome
+
+
+  
+  
+
+<br/>
+
+Test Credentials:
+
+ Dummy logins are added in the login page for all the user flows that includes Student Interviewer and admin.
+  
+
+# Installation
+
+  
+
+1. Clone the repo
+
+```sh
+
+git clone https://github.com/pesto-students/mock-prep-n11-eta2-fe.git
+
+```
+
+
+
+2. Install NPM packages
+
+```sh
+
+cd mock-prep-n11-eta2-fe && npm install
+
+```
+
+3. Run
+
+```sh
+
+npm start
+
+```
+
+4. Open http://localhost:3000 to view it in the browser
+
+  
+
+6. Run Test cases
+
+```sh
+
+npm test
+
+```
+
+
+
+# Technology Stack
+
+-   [Node Js](https://nodejs.org/en/)
+-   [Express Js](https://expressjs.com/)
+-   [Monogo DB](https://www.mongodb.com/)
+
+
+
+## [](https://github.com/pesto-students/mock-prep-n11-eta2-fe#api-integrations)API Documentation
+
+
+[Postman Documentation URL](https://documenter.getpostman.com/view/9145771/UVRHi3EN)
+
+
+  
+
+# Authors
+
+  
+[Balaji Kamalesan](https://github.com/balaji-kamalesan-au3)
+[Mohammed Saif ](https://github.com/saifmohammed888) 
+
+
+  
+
+  
+
+# License
+
+  
+
+[MIT](https://opensource.org/licenses/MIT)
